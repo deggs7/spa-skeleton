@@ -1,16 +1,21 @@
 require.config({
     paths: {
-        angular: '../bower_components/angular/angular'
-        // jquery: '../bower_components/jquery/jquery'
+        angular: '../bower_components/angular/angular',
+        semantic: '../bower_components/semantic-ui/build/packaged/javascript/semantic',
+        jquery: '../bower_components/jquery/jquery'
     },
     shim: {
         angular: {
             exports: 'angular'
+        },
+        semantic : {
+            deps: ['jquery'],
+            exports: 'semantic'
         }
     }
 });
 
-require(['app'], function (app) {
+require(['app', 'semantic'], function (app) {
     'use strict';
 
     console.log('main');
