@@ -1,6 +1,17 @@
 /*global define */
-define([], function () {
+define(['angular'], function (angular) {
     'use strict';
 
-    return '\'Allo \'Allo!';
+    console.log('load app');
+
+    angular.module('heroApp', [])
+    .controller('HeroUnitCtrl', ['$scope', function($scope){
+        $scope.hero = 'david';
+    }]);
+
+    angular.element(document).ready(function() {
+        angular.bootstrap(document, ['heroApp']);
+    });
+
 });
+

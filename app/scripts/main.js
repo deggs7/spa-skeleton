@@ -1,12 +1,18 @@
 require.config({
     paths: {
-        jquery: '../bower_components/jquery/jquery'
+        angular: '../bower_components/angular/angular'
+        // jquery: '../bower_components/jquery/jquery'
+    },
+    shim: {
+        angular: {
+            exports: 'angular'
+        }
     }
 });
 
-require(['app', 'jquery'], function (app, $) {
+require(['app'], function (app) {
     'use strict';
-    // use app here
-    console.log(app);
-    console.log('Running jQuery %s', $().jquery);
+
+    console.log('main');
+
 });

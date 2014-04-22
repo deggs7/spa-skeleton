@@ -4,7 +4,9 @@
   "dependencies": {
     "requirejs": "~2.1.8",
     "modernizr": "~2.6.2",
-    "jquery": "~1.10.2"
+    "jquery": "~1.10.2",
+    "Semantic-UI": "~0.15.5",
+    "angular": "~1.2.16"
   },
   "devDependencies": {}
 }

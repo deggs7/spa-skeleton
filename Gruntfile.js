@@ -19,6 +19,8 @@ module.exports = function (grunt) {
         dist: 'dist'
     };
 
+    grunt.loadNpmTasks('grunt-bower-install');
+
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
@@ -337,6 +339,26 @@ module.exports = function (grunt) {
             },
             all: {
                 rjsConfig: '<%= yeoman.app %>/scripts/main.js'
+            }
+        },
+        bowerInstall: {
+            target: {
+                // Point to the files that should be updated when
+                // you run `grunt bower-install`
+                src: [
+                    'app/index.html'   // .html support...
+                    //'app/views/**/*.jade',   // .jade support...
+                    //'app/styles/main.scss',  // .scss & .sass support...
+                    //'app/config.yml'         // and .yml & .yaml support out of the box!
+                ],
+                // Optional:
+                // ---------
+                cwd: '',
+                dependencies: true,
+                devDependencies: false,
+                exclude: [],
+                fileTypes: {},
+                ignorePath: ''
             }
         }
     });
